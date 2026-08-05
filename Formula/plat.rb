@@ -5,21 +5,21 @@
 class Plat < Formula
   desc "Domain lookup via WHOIS and RDAP with per-field source provenance"
   homepage "https://github.com/patramsey/plat"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/patramsey/plat/releases/download/v0.1.3/plat_darwin_amd64.tar.gz"
-      sha256 "01249c3f3b66cebdb295e2e1fca7ba66433e4b3511c6b7604111a625eefb4511"
+      url "https://github.com/patramsey/plat/releases/download/v0.1.4/plat_darwin_amd64.tar.gz"
+      sha256 "85b9bac92b8d5b4a3bb63cf0f70af485ce123b5691e8c18bd149100643a50fa1"
 
       define_method(:install) do
         bin.install "plat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/patramsey/plat/releases/download/v0.1.3/plat_darwin_arm64.tar.gz"
-      sha256 "7c55872a0b37c8a4a30352d6821faef78440c39792ec84c33c269c624267472c"
+      url "https://github.com/patramsey/plat/releases/download/v0.1.4/plat_darwin_arm64.tar.gz"
+      sha256 "44f961b6e145b24c9b3941836893e09e7cfb58d14c03363989b0ce6b8be16876"
 
       define_method(:install) do
         bin.install "plat"
@@ -29,15 +29,15 @@ class Plat < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/patramsey/plat/releases/download/v0.1.3/plat_linux_amd64.tar.gz"
-      sha256 "ae2fedbb520b1fc1e14ec29c8a1f26858f6b963a0e6ba975e68cc366e5826117"
+      url "https://github.com/patramsey/plat/releases/download/v0.1.4/plat_linux_amd64.tar.gz"
+      sha256 "10395f3d76a5e287461b1ed9c13eb1fca9373bd2f616fdf2e9be87a4622b722a"
       define_method(:install) do
         bin.install "plat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/patramsey/plat/releases/download/v0.1.3/plat_linux_arm64.tar.gz"
-      sha256 "a072783d5c15216d163bd5f55cda0f935f496e8a889ea1440d296653445344cb"
+      url "https://github.com/patramsey/plat/releases/download/v0.1.4/plat_linux_arm64.tar.gz"
+      sha256 "bc16c9f34d4a0334754489e355d61ef84a963bab0a401112e4398fe3c50624de"
       define_method(:install) do
         bin.install "plat"
       end

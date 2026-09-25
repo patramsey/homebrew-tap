@@ -5,21 +5,21 @@
 class Namecom < Formula
   desc "CLI for the name.com domain registrar API"
   homepage "https://github.com/patramsey/namecom-cli"
-  version "0.4.2"
+  version "0.4.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.2/namecom_darwin_amd64.tar.gz"
-      sha256 "918834086eb3345ab0e7d522b9bba1d2741b9a9baf185a5f00d31eb0229bc609"
+      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.3/namecom_darwin_amd64.tar.gz"
+      sha256 "b8c9ec8a68a2a631e99a34efb98edfc27a663ae3ff641af02cf358cf467faafa"
 
       define_method(:install) do
         bin.install "namecom"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.2/namecom_darwin_arm64.tar.gz"
-      sha256 "0f4723a4a390c4b0fa589c9dc2b3d42d42ad6c23aa0ea121ef10117f6b6ff540"
+      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.3/namecom_darwin_arm64.tar.gz"
+      sha256 "c1d0502353ce2048671f9b3152372ecf42a8aba75a1a8cf07eaddddb4d78ed43"
 
       define_method(:install) do
         bin.install "namecom"
@@ -29,31 +29,18 @@ class Namecom < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.2/namecom_linux_amd64.tar.gz"
-      sha256 "b9eb74120fa9d6f08766f033c77c3e92ebb84ca6b639f272dd9bc47ce9c1cc5b"
+      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.3/namecom_linux_amd64.tar.gz"
+      sha256 "816a2acb3d593a80b8065324e048f07de9c5de32f07d149fb2e935c82b0facc9"
       define_method(:install) do
         bin.install "namecom"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.2/namecom_linux_arm64.tar.gz"
-      sha256 "4c7110a788c4e0b5dbc75fbdb597d5e48aa6e6ec67536fa85555eb4d6bddc644"
+      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.3/namecom_linux_arm64.tar.gz"
+      sha256 "c74acd604bf9adeb8319a581eeedf5f84c90cf5cbf5fc25d81d9cc3c008597fa"
       define_method(:install) do
         bin.install "namecom"
       end
     end
-  end
-
-  def caveats
-    <<~EOS
-      If you are upgrading from the Homebrew cask (v0.2.4 - v0.3.1), two
-      steps remain:
-
-        brew uninstall --cask --force namecom
-        brew link namecom
-
-      Without the second, namecom will not be on your PATH. Fresh installs
-      need neither.
-    EOS
   end
 end

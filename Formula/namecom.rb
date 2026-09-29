@@ -5,21 +5,21 @@
 class Namecom < Formula
   desc "CLI for the name.com domain registrar API"
   homepage "https://github.com/patramsey/namecom-cli"
-  version "0.4.5"
+  version "0.4.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.5/namecom_darwin_amd64.tar.gz"
-      sha256 "8af56387ba4529b666d99ad180084486c2de937841ace5b18c009324e1cfbb06"
+      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.6/namecom_darwin_amd64.tar.gz"
+      sha256 "b125499039827abdda758254584c060e370538e9cc3a661d91f9369b71546d80"
 
       define_method(:install) do
         bin.install "namecom"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.5/namecom_darwin_arm64.tar.gz"
-      sha256 "e7ea14ce0f8e3d23c9c4b77e53bff35da6cc87ea67e306ab97e7bc64b061ad1e"
+      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.6/namecom_darwin_arm64.tar.gz"
+      sha256 "b7d398ccbfccd73e324b83d1761325e70e2cce36bee4290f459e91b24d529424"
 
       define_method(:install) do
         bin.install "namecom"
@@ -29,15 +29,15 @@ class Namecom < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.5/namecom_linux_amd64.tar.gz"
-      sha256 "a8820619b71d09ded04e8121874c43317f3bc1ecf408b8381fbf5b37d66892d0"
+      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.6/namecom_linux_amd64.tar.gz"
+      sha256 "fa1963f677207d6cfc9d9558fb11fbee3a91370821409ae7f929a797d5c2fd38"
       define_method(:install) do
         bin.install "namecom"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.5/namecom_linux_arm64.tar.gz"
-      sha256 "b8972a8e0d743b6e4b4caee8f53564c9fcb219ca10071cae145cae1450811fc0"
+      url "https://github.com/patramsey/namecom-cli/releases/download/v0.4.6/namecom_linux_arm64.tar.gz"
+      sha256 "9ad0522f4e0c12f24d5abdf049eb85c695263e340050b56bb7829aeb0016c6a3"
       define_method(:install) do
         bin.install "namecom"
       end

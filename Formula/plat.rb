@@ -5,21 +5,21 @@
 class Plat < Formula
   desc "Domain, IP, and ASN lookup via WHOIS and RDAP with per-field source provenance"
   homepage "https://github.com/patramsey/plat"
-  version "0.12.2"
+  version "0.13.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/patramsey/plat/releases/download/v0.12.2/plat_darwin_amd64.tar.gz"
-      sha256 "43122c8eb0d23fd895925d7d90e6c337f75123752f3d2798862a8b1566d88b22"
+      url "https://github.com/patramsey/plat/releases/download/v0.13.0/plat_darwin_amd64.tar.gz"
+      sha256 "e7d5114118987409e897fb5c1777bf2503f5e507e610b11df8009b8eb1db6cf2"
 
       define_method(:install) do
         bin.install "plat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/patramsey/plat/releases/download/v0.12.2/plat_darwin_arm64.tar.gz"
-      sha256 "ac6ab110d37e4d8bd728f213ce1264e549562761db9db05b77bf6f7da7658030"
+      url "https://github.com/patramsey/plat/releases/download/v0.13.0/plat_darwin_arm64.tar.gz"
+      sha256 "35c107f9393a51b8f6ad4e83285c4a60cc583fc626a45a81b8dd0f572d1b8f7c"
 
       define_method(:install) do
         bin.install "plat"
@@ -29,15 +29,15 @@ class Plat < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/patramsey/plat/releases/download/v0.12.2/plat_linux_amd64.tar.gz"
-      sha256 "b42104ce664abe103cda1b15a8e0282bd0550153edf94e07ddfec8c7ad49a5e4"
+      url "https://github.com/patramsey/plat/releases/download/v0.13.0/plat_linux_amd64.tar.gz"
+      sha256 "98e9e0b57414f9e14f113ee948adc5562bbe743d352e078a83f1ea2a12a4fa1e"
       define_method(:install) do
         bin.install "plat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/patramsey/plat/releases/download/v0.12.2/plat_linux_arm64.tar.gz"
-      sha256 "a1dfc7dd69b5094e996cc4827d235ac268e947d586a3d0c78f74e9a9bbc6b406"
+      url "https://github.com/patramsey/plat/releases/download/v0.13.0/plat_linux_arm64.tar.gz"
+      sha256 "708a92a791ab597d481014bb98bec0ee03aea2fc177931756ec7f19f8c685a8f"
       define_method(:install) do
         bin.install "plat"
       end
